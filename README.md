@@ -19,7 +19,9 @@ An implementation of DCGAN using Tensorflow2.0
 ## Model
 ### DCGAN Guide
 <center><img src="./images/dcgan_guide.png"></center>
+
 * All models were trained with mini-batch stochastic gradient descent (SGD) with a **mini-batch size of 128**. **All weights were initialized from a zero-centered Normal distribution with standard deviation 0.02**. In the **LeakyReLU**, the slope of the leak was set to **0.2** in all models. While previous GAN work has used momentum to accelerate training, we used the **Adam optimizer** (Kingma & Ba, 2014) with tuned hyperparameters. We found the suggested **learning rate** of 0.001, to be too high, using **0.0002** instead. Additionally, we found leaving the **momentum term β1** at the suggested value of 0.9 resulted in training oscillation and instability while reducing it to **0.5** helped stabilize training.
+
 ### **Generator**
 <center><img src="./images/generator.png" width="50%" height="50%"></center>
 
@@ -43,6 +45,7 @@ Use `dcgan.py` to train a DCGAN network.
 ## Results
 ### loss
 <center><img src="./images/loss.png"></center>
+
 ### epoch = 1
 <center><img src="./images/image_at_epoch_0001.png"></center>
 
